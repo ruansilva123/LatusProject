@@ -1,0 +1,20 @@
+@import "./styles/variables.scss";
+
+@font-face {
+    font-family: "ADLaMDisplay";
+    src: url("/assets/fonts/ADLaMDisplay-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "ADLaMDisplay", "Arial";
+    color: $default-text-color;
+}
+
+html, body{
+    height: 100vh;
+}

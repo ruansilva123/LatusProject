@@ -1,0 +1,51 @@
+.container-page {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    header {
+        display: flex;
+        flex-direction: row;
+        padding: 0 10px;
+    
+        img {
+            height: 40px;
+            margin-top: 10px;
+        }
+    }
+    
+    main {
+        display: flex;
+        flex-direction: column;
+        padding: 0 30px;
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+
+            .hero-content {
+                background-image: url("/assets/png/hero-image.png");
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 30px;
+                height: 300px;
+
+                h1 {
+                    color: #FFFFFF;
+                    text-shadow: 0 4px 6px rgba(0, 0, 0, 1); 
+                }
+            }
+        }
+    }
+    
+    footer {
+        background-image: url("/assets/png/footer-image.png");
+        height: 600px;
+        padding: 0 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
