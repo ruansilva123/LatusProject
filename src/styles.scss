@@ -12,9 +12,10 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "ADLaMDisplay", "Arial";
-    color: $default-text-color;
+    color: $primary-color;
 }
 
 html, body{
     height: 100vh;
+    min-width: 300px;
 }

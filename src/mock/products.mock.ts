@@ -4,6 +4,7 @@ export const MOCK_PRODUCTS = [
         name: "Camisa Space",
         price: 69.99,
         sizes: ["p", "m", "g"],
+        category: "JDM",
         description: "Camisa branca e azul, com tema espacial.",
         images: [
             "imagem 1",
