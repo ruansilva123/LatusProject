@@ -49,7 +49,21 @@
         }
 
         .product-content {
+            display: flex;
+            flex-direction: column;
             margin-top: 100px;
+            gap: 35px;
+
+            &__catalog {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(325px, 1fr));
+                gap: 35px;
+
+                app-product-card {
+                    display: flex;
+                    justify-content: center;
+                }
+            }
         }
     }
     

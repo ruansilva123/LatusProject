@@ -13,18 +13,17 @@
 
         <div class="product-content">
             <div>
+                <p>Filtros aplicados:</p>
             </div>
-            <div>
-                <div>
-                </div>
-                <div>
+            <div class="product-content__catalog">
+                @for (product of products; track product.id) {
                     <app-product-card
-                        title="Camisetas Space"
-                        [price]="69.99"
-                        [sizes]="['P','M','G','GG']"
-                        imageRoot="product-images/camisa-space.png"
+                        [title]="product.name"
+                        [price]="product.price"
+                        [sizes]="product.sizes"
+                        [imageRoot]="product.images[0]"
                     ></app-product-card>
-                </div>
+                }
             </div>
         </div>
     </main>
