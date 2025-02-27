@@ -1,1 +1,25 @@
-<p>product-card works!</p>
+<section>
+    <div class="product-image">
+        <img [src]="imageRoot" alt="product-image">
+    </div>
+    <div class="product-informations">
+        <h2>{{ title }}</h2>
+        <div class="product-informations__price-size">
+            <div class="product-informations__price-size__sizes">
+                <p>Tamanhos:</p>
+                <div class="product-informations__price-size__sizes__size-container">
+                    @for (size of sizes; track size) {
+                            <div class="product-informations__price-size__sizes__size-container__content">
+                                <p>
+                                    {{ size }}
+                                </p>
+                            </div>
+                    } @empty {
+                        <p>Nenhum produto encontrado!</p>
+                    }
+                </div>
+            </div>
+            <p>R$ <span>{{ price }}</span></p>
+        </div>
+    </div>
+</section>

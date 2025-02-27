@@ -8,6 +8,7 @@
     h1 {
         color: #FFFFFF;
         text-shadow: 0 4px 6px rgba(0, 0, 0, 1);
+        font-size: 40px;
     }
 
     .bg-image {
@@ -38,12 +39,17 @@
 
             .hero-content {
                 background-image: url("/assets/png/hero-image.png");
+                background-position: center;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 border-radius: 30px;
                 height: 300px;
             }
+        }
+
+        .product-content {
+            margin-top: 100px;
         }
     }
     
@@ -56,7 +62,8 @@
         align-items: center;
 
         p {
-            color: #FFFFFF
+            color: #FFFFFF;
+            font-size: 20px;
         }
 
         .redirect-content{
@@ -64,8 +71,16 @@
             text-align: center;
             display: flex;
             flex-direction: column;
-            gap: 50px;
-            margin-top: 50px;
+            gap: 60px;
+            margin-top: 60px;
+
+            .button-content {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                gap: 45px;
+                margin-top: 45px;
+            }
         }
 
         .copy-content {
@@ -78,6 +93,10 @@
 
             position: relative;
             margin-top: auto;
+
+            p {
+                font-size: 16px;
+            }
         }
     }
 }
