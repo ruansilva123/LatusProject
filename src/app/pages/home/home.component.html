@@ -16,7 +16,7 @@
                 <p>Filtros aplicados:</p>
             </div>
             <div class="product-content__catalog">
-                @for (product of products; track product.id) {
+                @for (product of paginatedProducts; track product.id) {
                     <app-product-card
                         [title]="product.name"
                         [price]="product.price"
@@ -24,6 +24,17 @@
                         [imageRoot]="product.images[0]"
                     ></app-product-card>
                 }
+            </div>
+            <div class="product-content__pages">
+                <button (click)="prevPage()">Voltar</button>
+                <p (click)="toglePage(1)">1</p>
+                @for (page of paginationPages; track page) {
+                    @if (page !== 1 && page !== 7) {
+                        <p (click)="toglePage(page)">{{ page }}</p>
+                    }
+                }
+                <p (click)="toglePage(totalPages)">{{ totalPages }}</p>
+                <button (click)="nextPage()">Próximo</button>
             </div>
         </div>
     </main>

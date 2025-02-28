@@ -64,6 +64,11 @@
                     justify-content: center;
                 }
             }
+
+            &__pages {
+                display: flex;
+                justify-content: center;
+            }
         }
     }
     
