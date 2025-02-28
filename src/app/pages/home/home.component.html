@@ -26,15 +26,25 @@
                 }
             </div>
             <div class="product-content__pages">
-                <button (click)="prevPage()">Voltar</button>
-                <p (click)="toglePage(1)">1</p>
+                <button (click)="prevPage()" [class.disable]="1 === currentPage">
+                    Voltar
+                </button>
+                <div [class.selected-page]="1 === currentPage">
+                    <p (click)="toglePage(1)">1</p>
+                </div>
                 @for (page of paginationPages; track page) {
-                    @if (page !== 1 && page !== 7) {
-                        <p (click)="toglePage(page)">{{ page }}</p>
+                    @if (page !== 1 && page !== totalPages) {
+                        <div [class.selected-page]="page === currentPage">
+                            <p (click)="toglePage(page)">{{ page }}</p>
+                        </div>
                     }
                 }
-                <p (click)="toglePage(totalPages)">{{ totalPages }}</p>
-                <button (click)="nextPage()">Próximo</button>
+                <div [class.selected-page]="totalPages === currentPage">
+                    <p (click)="toglePage(totalPages)">{{ totalPages }}</p>
+                </div>
+                <button (click)="nextPage()" [class.disable]="totalPages === currentPage">
+                    Próximo
+                </button>
             </div>
         </div>
     </main>

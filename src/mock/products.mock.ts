@@ -901,4 +901,81 @@ export const MOCK_PRODUCTS = [
             "product-images/camisa-space.png"
         ]
     },
+    {
+        id: 81,
+        name: "Camisa Space 16",
+        price: 69.99,
+        sizes: ["P", "M", "G"],
+        category: "JDM",
+        description: "Camisa branca e azul, com tema espacial.",
+        images: [
+            "product-images/camisa-space.png"
+        ]
+    },
+    {
+        id: 82,
+        name: "Camisa Space 16",
+        price: 69.99,
+        sizes: ["P", "M", "G"],
+        category: "JDM",
+        description: "Camisa branca e azul, com tema espacial.",
+        images: [
+            "product-images/camisa-space.png"
+        ]
+    },
+    {
+        id: 83,
+        name: "Camisa Space 16",
+        price: 69.99,
+        sizes: ["P", "M", "G"],
+        category: "JDM",
+        description: "Camisa branca e azul, com tema espacial.",
+        images: [
+            "product-images/camisa-space.png"
+        ]
+    },
+    {
+        id: 84,
+        name: "Camisa Space 16",
+        price: 69.99,
+        sizes: ["P", "M", "G"],
+        category: "JDM",
+        description: "Camisa branca e azul, com tema espacial.",
+        images: [
+            "product-images/camisa-space.png"
+        ]
+    },
+    {
+        id: 85,
+        name: "Camisa Space 16",
+        price: 69.99,
+        sizes: ["P", "M", "G"],
+        category: "JDM",
+        description: "Camisa branca e azul, com tema espacial.",
+        images: [
+            "product-images/camisa-space.png"
+        ]
+    },
+    {
+        id: 86,
+        name: "Camisa Space 16",
+        price: 69.99,
+        sizes: ["P", "M", "G"],
+        category: "JDM",
+        description: "Camisa branca e azul, com tema espacial.",
+        images: [
+            "product-images/camisa-space.png"
+        ]
+    },
+    {
+        id: 87,
+        name: "Camisa Space 16",
+        price: 69.99,
+        sizes: ["P", "M", "G"],
+        category: "JDM",
+        description: "Camisa branca e azul, com tema espacial.",
+        images: [
+            "product-images/camisa-space.png"
+        ]
+    },
 ]

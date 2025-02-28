@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { RedirectButtonComponent } from '../../components/redirect-button/redirect-button.component';
 import { ProductCardComponent } from '../../components/product-card/product-card.component';
 import { MOCK_PRODUCTS } from '../../../mock/products.mock';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-home',
@@ -17,6 +19,11 @@ export class HomeComponent {
   currentPage: number = 1;
   itemsPerPage: number = 12;
 
+  constructor(
+    private toastr: ToastrService,
+    @Inject(PLATFORM_ID) private plataformId: Object
+  ){}
+
   get totalPages() {
     return Math.ceil(this.products.length / this.itemsPerPage);
   }
@@ -29,12 +36,20 @@ export class HomeComponent {
   nextPage() {
     if (this.currentPage < Math.ceil(this.products.length / this.itemsPerPage)) {
       this.currentPage++;
+    } else {
+      if (isPlatformBrowser(this.plataformId)) {
+        this.toastr.error("Não há mais páginas para avançar!");
+      }
     }
   }
 
   prevPage() {
     if (this.currentPage > 1) {
       this.currentPage--;
+    } else {
+      if (isPlatformBrowser(this.plataformId)) {
+        this.toastr.error("Não há mais páginas para voltar!");
+      }
     }
   }
 
@@ -53,12 +68,12 @@ export class HomeComponent {
         pages.push(i);
       }
     } else {
-      if (this.currentPage <= 3) {
+      if (this.currentPage <= 4) {
         for (let i = 1; i <= 5; i++) {
           pages.push(i);
         }
         pages.push('...');
-      } else if (this.currentPage >= total - 2) {
+      } else if (this.currentPage >= total - 2 || this.currentPage == total - 3) {
         pages.push(1, '...');
         for (let i = total - 4; i <= total; i++) {
           pages.push(i);

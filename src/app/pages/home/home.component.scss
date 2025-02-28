@@ -68,6 +68,50 @@
             &__pages {
                 display: flex;
                 justify-content: center;
+                align-items: center;
+                gap:25px;
+                margin-bottom: 20px;
+
+                div {
+                    cursor: pointer;
+                    p {
+                        color: $latus-color-maximum;
+                        font-size: 20px;
+                    }
+                }
+
+                .selected-page {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: $latus-color-medium;
+                    border-radius: 50px;
+                    height: 35px;
+                    width: 35px;
+                    p {
+                        color: #FFFFFF;
+                    }
+                }
+
+                button {
+                    background-color: $latus-color-minimum;
+                    color: $latus-color-maximum;
+                    padding: 8px 25px;
+                    border-radius: 30px;
+                    border: none;
+                    font-size: 20px;
+                    cursor: pointer;
+                }
+
+                .disable {
+                    background-color: rgba($color: $latus-color-minimum, $alpha: 0.4);
+                    color: $latus-color-medium;
+                    padding: 8px 25px;
+                    border-radius: 30px;
+                    border: none;
+                    font-size: 20px;
+                    cursor: pointer;
+                }
             }
         }
     }
