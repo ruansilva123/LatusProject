@@ -18,6 +18,7 @@
             <div class="product-content__catalog">
                 @for (product of paginatedProducts; track product.id) {
                     <app-product-card
+                        [id]="product.id"
                         [title]="product.name"
                         [price]="product.price"
                         [sizes]="product.sizes"

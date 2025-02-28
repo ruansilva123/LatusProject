@@ -1,4 +1,4 @@
-<section>
+<section (click)="openProductModal()">
     <div class="product-image">
         <img [src]="imageRoot" alt="product-image">
     </div>
@@ -23,3 +23,9 @@
         </div>
     </div>
 </section>
+
+<app-product-modal
+    [openModal] = "openModal"
+    [id] = "id"
+    (toogle)="closeProductModal()"
+></app-product-modal>
