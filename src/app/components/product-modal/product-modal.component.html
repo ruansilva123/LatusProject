@@ -1,16 +1,20 @@
 @if (openModal) {
     <section>
         <div>
-
+            <img src="{{ productData.images[0] }}" alt="product">
         </div>
-        <div>
-            <h2></h2>
-            <p></p>
+        <div class="modal-content">
+            <h1>{{ productData.name }}</h1>
+            <p>{{ productData.description }}</p>
             <div>
-                <div></div>
-                <div></div>
+                <div>
+                    <app-product-sizes
+                        [sizes]="productData.sizes"
+                    ></app-product-sizes>
+                </div>
+                <div>{{ productData.price }}</div>
             </div>
-            <p></p>
+            <p>Gostou? Entre em contato com a loja.</p>
             <app-redirect-button
                 iconRoot="assets/png/whatsapp.png"
             ></app-redirect-button>

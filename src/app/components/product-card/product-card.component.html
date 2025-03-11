@@ -5,7 +5,10 @@
     <div class="product-informations">
         <h2>{{ title }}</h2>
         <div class="product-informations__price-size">
-            <div class="product-informations__price-size__sizes">
+            <app-product-sizes
+                [sizes]="sizes"
+            ></app-product-sizes>
+            <!-- <div class="product-informations__price-size__sizes">
                 <p>Tamanhos:</p>
                 <div class="product-informations__price-size__sizes__size-container">
                     @for (size of sizes; track size) {
@@ -15,10 +18,10 @@
                                 </p>
                             </div>
                     } @empty {
-                        <p>Nenhum produto encontrado!</p>
+                        <p>Nenhum tamanho especificado!</p>
                     }
                 </div>
-            </div>
+            </div> -->
             <p>R$ <span>{{ price }}</span></p>
         </div>
     </div>

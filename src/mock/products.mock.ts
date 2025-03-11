@@ -3,7 +3,7 @@ export const MOCK_PRODUCTS = [
         id: 1,
         name: "Camisa Space",
         price: 69.99,
-        sizes: ["P", "M", "G"],
+        sizes: [],
         category: "JDM",
         description: "Camisa branca e azul, com tema espacial.",
         images: [
@@ -495,17 +495,6 @@ export const MOCK_PRODUCTS = [
         ]
     },
     {
-        id: 45,
-        name: "Camisa Space 16",
-        price: 69.99,
-        sizes: ["P", "M", "G"],
-        category: "JDM",
-        description: "Camisa branca e azul, com tema espacial.",
-        images: [
-            "product-images/camisa-space.png"
-        ]
-    },
-    {
         id: 46,
         name: "Camisa Space 16",
         price: 69.99,
@@ -836,17 +825,6 @@ export const MOCK_PRODUCTS = [
         ]
     },
     {
-        id: 75,
-        name: "Camisa Space 16",
-        price: 69.99,
-        sizes: ["P", "M", "G"],
-        category: "JDM",
-        description: "Camisa branca e azul, com tema espacial.",
-        images: [
-            "product-images/camisa-space.png"
-        ]
-    },
-    {
         id: 76,
         name: "Camisa Space 16",
         price: 69.99,
@@ -969,6 +947,28 @@ export const MOCK_PRODUCTS = [
     },
     {
         id: 87,
+        name: "Camisa Space 16",
+        price: 69.99,
+        sizes: ["P", "M", "G"],
+        category: "JDM",
+        description: "Camisa branca e azul, com tema espacial.",
+        images: [
+            "product-images/camisa-space.png"
+        ]
+    },
+    {
+        id: 88,
+        name: "Camisa Space 16",
+        price: 69.99,
+        sizes: ["P", "M", "G"],
+        category: "JDM",
+        description: "Camisa branca e azul, com tema espacial.",
+        images: [
+            "product-images/camisa-space.png"
+        ]
+    },
+    {
+        id: 89,
         name: "Camisa Space 16",
         price: 69.99,
         sizes: ["P", "M", "G"],

@@ -1,11 +1,15 @@
-import { Component, Input, Output, EventEmitter} from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit} from '@angular/core';
 import { RedirectButtonComponent } from '../redirect-button/redirect-button.component';
 import { ProductsService } from '../../services/product/products.service';
 import { Product } from '../../interface/product';
+import { ProductSizesComponent } from '../product-sizes/product-sizes.component';
 
 @Component({
   selector: 'app-product-modal',
-  imports: [RedirectButtonComponent],
+  imports: [
+    RedirectButtonComponent,
+    ProductSizesComponent
+  ],
   providers:[ProductsService],
   templateUrl: './product-modal.component.html',
   styleUrl: './product-modal.component.scss'
@@ -16,8 +20,10 @@ export class ProductModalComponent {
   @Output("toogle") onToggle = new EventEmitter();
   productData!: Product;
 
-  constructor(private productService: ProductsService){
-    this.productData = this.productService.selectProductById(this.id)
+  constructor(private productService: ProductsService){}
+
+  ngOnInit(): void {
+    this.productData = this.productService.selectProductById(this.id);
   }
   
   toggle() {

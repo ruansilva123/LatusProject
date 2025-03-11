@@ -1,0 +1,14 @@
+<div class="sizes">
+    <p>Tamanhos:</p>
+    <div class="sizes__size-container">
+        @for (size of sizes; track size) {
+                <div class="sizes__size-container__content">
+                    <p>
+                        {{ size }}
+                    </p>
+                </div>
+        } @empty {
+            <p>Nenhum tamanho especificado!</p>
+        }
+    </div>
+</div>
