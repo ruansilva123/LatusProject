@@ -8,20 +8,6 @@
             <app-product-sizes
                 [sizes]="sizes"
             ></app-product-sizes>
-            <!-- <div class="product-informations__price-size__sizes">
-                <p>Tamanhos:</p>
-                <div class="product-informations__price-size__sizes__size-container">
-                    @for (size of sizes; track size) {
-                            <div class="product-informations__price-size__sizes__size-container__content">
-                                <p>
-                                    {{ size }}
-                                </p>
-                            </div>
-                    } @empty {
-                        <p>Nenhum tamanho especificado!</p>
-                    }
-                </div>
-            </div> -->
             <p>R$ <span>{{ price }}</span></p>
         </div>
     </div>

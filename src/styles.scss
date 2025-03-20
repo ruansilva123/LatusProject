@@ -27,3 +27,9 @@ html, body{
     min-width: 300px;
     color: $primary-color;
 }
+
+@mixin responsive($size) {
+    @media (max-width: $size) {
+        @content;
+    }
+}

@@ -5,7 +5,7 @@
     flex-direction: column;
 
     p {
-        font-size: 18px;
+        font-size: 1.125em;
         font-weight: normal;
     }
 
@@ -18,17 +18,17 @@
             align-items: center;
             background-color: $latus-color-minimum;
             border-radius: 50px;
-            width: 35px;
-            height: 35px;
+            width: 2em;
+            height: 2em;
             box-shadow: -2px 2px 4px rgba($color: #000000, $alpha: 0.25);
 
             &:not(:first-child) {
-                margin-left: -10px;
+                margin-left: -0.625em;
             }
     
             p {
                 color: $latus-color-maximum;
-                font-size: 18px;
+                font-size: 1.125em;
             }
         }
     }

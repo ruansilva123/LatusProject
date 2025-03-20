@@ -5,29 +5,29 @@ button {
     flex-direction: row;
     align-items: center;
     cursor: pointer;
-    gap: 30px;
-    padding: 5px 15px;
+    gap: 2em;
+    padding: 0.3125em 0.9375em;
 
     border-radius: 30px;
     border: 2px solid #FFFFFF;
     background-color: rgba($color: #FFFFFF, $alpha: 0.5);
 
     img {
-        height: 20px;
+        height: 1.25em;
     }
 
     div {
         display: flex;
         flex-direction: row;
         align-items: center;
-        gap: 10px;
+        gap: 0.9375em;
 
         p {
-            font-size: 20px;
+            font-size: 1.25em;
         }
     
         img {
-            height: 40px;
+            height: 2.5em;
         }
     }
 }

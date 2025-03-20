@@ -12,19 +12,40 @@ section {
     display: flex;
     flex-direction: row;
 
-    width: 850px;
-    height: 650px;
+    width: 60vw;
+    height: 70vh;
+
+    @include responsive($desktop) {
+        width: 78vw;
+    }
+    @include responsive($laptop) {
+        width: 90vw;
+    }
+    @include responsive(600px) {
+        width: 100vw;
+        height: 100vh;
+        flex-direction: column;
+        border-radius: 0px;
+    }
+    @include responsive($mobile) {
+        background-color: purple;
+    }
 
     .modal-images {
         width: 50%;
         background-color: $product-background;
         border-radius: 30px 0 0 30px;
-        padding: 30px 30px 60px 30px;
+        padding: 2em 2em 4em 2em;
         overflow: hidden;
 
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+
+        @include responsive(600px) {
+            width: 100%;
+            border-radius: 0px;
+        }
         
         &__close-modal {
             img {
@@ -36,10 +57,13 @@ section {
             display: flex;
             justify-content: center;
             align-items: center;
-            // flex-grow: 1; // não está ocupando o espaço que sobra
+            @include responsive(600px) {
+                margin-top: 1.5em;
+            }
+
             img {
                 object-fit: cover;
-                max-width: 300px;
+                max-width: 18.75em;
                 height: auto;
             }
         }
@@ -48,11 +72,15 @@ section {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 20px;
+            gap: 1.25em;
+
+            @include responsive(600px) {
+                margin-top: 1.5em;
+            }
 
             div {
-                height: 8px;
-                width: 50px;
+                height: 0.5em;
+                width: 3.125em;
                 background-color: #FFFFFF;
                 border-radius: 15px;
                 cursor: pointer;
@@ -69,21 +97,43 @@ section {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 0 30px;
+        padding: 0 1.875em;
+
+        @include responsive($tablet) {
+            padding: 0 1em;
+        }
+        @include responsive(600px) {
+            width: 100%
+        }
 
         h1, p {
             font-family: 'Poppins', 'Arial';
         }
 
         h1 {
-            font-size: 40px;
-            margin: 65px 0;
+            font-size: 2.5em;
+            margin: 2em 0;
+
+            @include responsive(900px) {
+                font-size: 2.125em;
+            }
+            @include responsive($tablet) {
+                font-size: 1.8em;
+                margin: 1.5em 0;
+            }
+            @include responsive(600px) {
+                margin: 1.2em 0;
+            }
         }
 
         &__body {
             display: flex;
             flex-direction: column;
-            gap: 65px;
+            gap: 2em;
+
+            @include responsive($tablet) {
+                gap: 1.5em;
+            }
 
             p {
                 text-align: justify;
@@ -94,7 +144,7 @@ section {
                 align-items: center;
                 p {
                     margin-left: auto;
-                    font-size: 32px;
+                    font-size: 2em;
                     font-family: 'ADLaMDisplay', 'Arial';
                 }
             }
@@ -105,12 +155,16 @@ section {
             flex-direction: column;
             align-items: center;
             margin-top: auto;
-            margin-bottom: 60px;
+            margin-bottom: 3.75em;
             width: 100%;
 
+            @include responsive(600px) {
+                margin: 1.5em 0;
+            }
+
             p {
-                margin-bottom: 18px;
-                font-size: 14px;
+                margin-bottom: 1.125em;
+                font-size: 0.875em;
                 width: 100%;
             }
 
