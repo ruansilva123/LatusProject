@@ -1,23 +1,36 @@
 @if (openModal) {
     <section>
-        <div>
-            <img src="{{ productData.images[0] }}" alt="product">
+        <div class="modal-images">
+            <div class="modal-images__close-modal">
+                <img src="assets/png/close.png" alt="close-modal" (click)="toggle()">
+            </div>
+            <div class="modal-images__product-image">
+                <img src="{{ productData.images[currentImage] }}" alt="product">
+            </div>
+            <div class="modal-images__selection">
+                @for (image of productData.images; track image; let idx = $index) {
+                    <div [class.current-image]="idx == currentImage" (click)="alterImage(idx)"></div>
+                }
+            </div>
         </div>
         <div class="modal-content">
             <h1>{{ productData.name }}</h1>
-            <p>{{ productData.description }}</p>
-            <div>
+            <div class="modal-content__body">
+                <p>{{ productData.description }}</p>
                 <div>
                     <app-product-sizes
                         [sizes]="productData.sizes"
                     ></app-product-sizes>
+                    <p>{{ productData.price }}</p>
                 </div>
-                <div>{{ productData.price }}</div>
             </div>
-            <p>Gostou? Entre em contato com a loja.</p>
-            <app-redirect-button
-                iconRoot="assets/png/whatsapp.png"
-            ></app-redirect-button>
+            <div class="modal-content__footer">
+                <p>Gostou? Entre em contato com a loja.</p>
+                <app-redirect-button
+                    iconRoot="assets/png/whatsapp-brown.png"
+                    [isModalButton]="true"
+                ></app-redirect-button>
+            </div>
         </div>
     </section>
     <div class="overlay" (click)="toggle()"></div>

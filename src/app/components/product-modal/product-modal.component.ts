@@ -19,6 +19,7 @@ export class ProductModalComponent {
   @Input() id!: number;
   @Output("toogle") onToggle = new EventEmitter();
   productData!: Product;
+  currentImage: number = 0;
 
   constructor(private productService: ProductsService){}
 
@@ -28,5 +29,9 @@ export class ProductModalComponent {
   
   toggle() {
     this.onToggle.emit();
+  }
+
+  alterImage(numberImage: number) {
+    this.currentImage = numberImage;
   }
 }

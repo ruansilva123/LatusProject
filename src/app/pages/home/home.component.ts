@@ -22,7 +22,9 @@ export class HomeComponent {
   constructor(
     private toastr: ToastrService,
     @Inject(PLATFORM_ID) private plataformId: Object
-  ){}
+  ){
+    this.toastr.warning("Catálogo em desenvolvimento.");
+  }
 
   get totalPages() {
     return Math.ceil(this.products.length / this.itemsPerPage);

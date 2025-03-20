@@ -14,14 +14,111 @@ section {
 
     width: 850px;
     height: 650px;
+
+    .modal-images {
+        width: 50%;
+        background-color: $product-background;
+        border-radius: 30px 0 0 30px;
+        padding: 30px 30px 60px 30px;
+        overflow: hidden;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+        &__close-modal {
+            img {
+                cursor: pointer;
+            }
+        }
+
+        &__product-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            // flex-grow: 1; // não está ocupando o espaço que sobra
+            img {
+                object-fit: cover;
+                max-width: 300px;
+                height: auto;
+            }
+        }
+
+        &__selection {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+
+            div {
+                height: 8px;
+                width: 50px;
+                background-color: #FFFFFF;
+                border-radius: 15px;
+                cursor: pointer;
+            }
+
+            .current-image {
+                background-color: $latus-color-maximum;
+            }
+        }
+    }
     
     .modal-content {
         width: 50%;
-        h1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 30px;
+
+        h1, p {
             font-family: 'Poppins', 'Arial';
         }
-    }
 
+        h1 {
+            font-size: 40px;
+            margin: 65px 0;
+        }
+
+        &__body {
+            display: flex;
+            flex-direction: column;
+            gap: 65px;
+
+            p {
+                text-align: justify;
+            }
+
+            div {
+                display: flex;
+                align-items: center;
+                p {
+                    margin-left: auto;
+                    font-size: 32px;
+                    font-family: 'ADLaMDisplay', 'Arial';
+                }
+            }
+        }
+
+        &__footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: auto;
+            margin-bottom: 60px;
+            width: 100%;
+
+            p {
+                margin-bottom: 18px;
+                font-size: 14px;
+                width: 100%;
+            }
+
+            app-redirect-button {
+                width: 100%;
+            }
+        }
+    }
 }
 
 .overlay {

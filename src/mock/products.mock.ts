@@ -5,7 +5,7 @@ export const MOCK_PRODUCTS = [
         price: 69.99,
         sizes: [],
         category: "JDM",
-        description: "Camisa branca e azul, com tema espacial.",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         images: [
             "product-images/camisa-space.png"
         ]
@@ -16,9 +16,12 @@ export const MOCK_PRODUCTS = [
         price: 69.99,
         sizes: ["P", "M", "G"],
         category: "JDM",
-        description: "Camisa branca e azul, com tema espacial.",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..",
         images: [
-            "product-images/camisa-space.png"
+            "product-images/camisa-space.png",
+            "product-images/test-new-photo.jpg",
+            "product-images/camisa-space.png",
+            "product-images/camisa-space.png",
         ]
     },
     {
@@ -27,9 +30,17 @@ export const MOCK_PRODUCTS = [
         price: 69.99,
         sizes: ["P", "M", "G"],
         category: "JDM",
-        description: "Camisa branca e azul, com tema espacial.",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..",
         images: [
-            "product-images/camisa-space.png"
+            "product-images/camisa-space.png",
+            "product-images/test-new-photo.jpg",
+            "product-images/camisa-space.png",
+            "product-images/camisa-space.png",
+            "product-images/camisa-space.png",
+            "product-images/camisa-space.png",
+            "product-images/camisa-space.png",
+            "product-images/camisa-space.png",
+            "product-images/camisa-space.png",
         ]
     },
     {
@@ -38,7 +49,7 @@ export const MOCK_PRODUCTS = [
         price: 69.99,
         sizes: ["P", "M", "G", "GG"],
         category: "JDM",
-        description: "Camisa branca e azul, com tema espacial.",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..",
         images: [
             "product-images/camisa-space.png"
         ]
@@ -49,7 +60,7 @@ export const MOCK_PRODUCTS = [
         price: 69.99,
         sizes: ["P", "M", "G"],
         category: "JDM",
-        description: "Camisa branca e azul, com tema espacial.",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..",
         images: [
             "product-images/camisa-space.png"
         ]
