@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter, OnInit} from '@angular/core';
+import { Component, Input, Output, EventEmitter} from '@angular/core';
 import { RedirectButtonComponent } from '../redirect-button/redirect-button.component';
 import { ProductsService } from '../../services/product/products.service';
 import { Product } from '../../interface/product';
@@ -12,7 +12,10 @@ import { ProductSizesComponent } from '../product-sizes/product-sizes.component'
   ],
   providers:[ProductsService],
   templateUrl: './product-modal.component.html',
-  styleUrl: './product-modal.component.scss'
+  styleUrls: [
+    './scss/product-modal.component.scss',
+    './scss/product-modal.layout.scss'
+  ]
 })
 export class ProductModalComponent {
   @Input() openModal: boolean = false;
